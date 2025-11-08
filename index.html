@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N30  — Премиум детейлинг</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-image">
+    <header>
+        <img src="images/logo.jpg" alt="N3O">
+        <nav>
+            <a href="#services">Услуги</a>
+            <a href="#reviews">Отзывы</a>
+            <a href="#form">Запись</a>
+            <a href="#map">Карта</a>
+        </nav>
+    </header>
+    <section class="hero" class="full-screen" >
+        <h1>N<sub>3</sub>O</h1>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap" rel="stylesheet">
+        <p>Премиум уход и защита вашего автомобиля</p>
+        <a href="tel:+375291000033" class="call-btn">🕻 Позвонить сейчас</a>
+        <a href="#services" class="scroll-down"></a>
+    </section>
+    <section id="services" class="services" class="full-screen">
+        <h2>Наши услуги</h2>
+        <div class="service-row">
+            <div class="service-block">
+                <button class="service-btn" data-target="body">Кузовной ремонт</button>
+                <div id="body" class="sublist">
+                 <a href="services/paint.html" class="sub-btn">Покраска элементов</a>
+<a href="services/restore.html" class="sub-btn">Восстановление авто под ключ</a>
+<a href="services/frame.html" class="sub-btn">Стапельные работы</a>
+                </div>
+            </div>
+            <div class="service-block" class="full-screen">
+                <button class="service-btn" data-target="detailing">Detailing</button>
+                <div id="detailing" class="sublist">
+                   <a href="services/clean.html" class="sub-btn">Химчистка</a>
+<a href="services/polish.html" class="sub-btn">Полировка</a>
+<a href="services/ceramic.html" class="sub-btn">Керамика</a>
+<a href="services/noise.html" class="sub-btn">Шумоизоляция</a>
+                </div>
+            </div>
+            <div class="service-block">
+                <button class="service-btn" data-target="pdr">PDR</button>
+                <div id="pdr" class="sublist">
+                    <!-- PDR -->
+                    <a href="services/pdr.html" class="sub-btn">Удаление вмятин без покраски</a>
+                </div>
+            </div>
+            <div class="service-block">
+                <button class="service-btn" data-target="anticor">Антикоррозионная обработка</button>
+                <div id="anticor" class="sublist">
+                    <!-- Антикор -->
+                    <a href="services/anticor.html" class="sub-btn">Обработка днища и скрытых полостей</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="reviews" class="reviews" class="full-screen">
+        <h2>Отзывы клиентов</h2>
+         <div class="review"><p><strong>Наталья Мельникова:</strong> Сделали мойку и полировку — машина как новая! Очень довольна результатом.</p></div>
+        <div class="review"><p><strong>Виктория Заблотская:</strong> Сделали керамическое покрытие изупречно!Осталась очень довольгна.</p></div>
+        <div class="review"><p><strong>Дмитрий Мельников:</strong> После химчистки салон как новый, рекомендую!</p></div>
+        <div class="review"><p><strong>Никита Чернов:</strong> Сделал покраску авто в мат. Краска легла качественно без изьянов! </p></div>
+    </section>
+    </section>
+    <section id="form" class="form-section" class="full-screen">
+        <h2>Онлайн-запись</h2>
+        <form id="booking-form">
+            <input type="text" id="name" placeholder="Ваше имя" required>
+            <input type="tel" id="phone" placeholder="+375 (__) ___-__-__" required>
+            <input type="text" id="service" placeholder="Какая услуга вас интересует" required />
+            <button type="submit">Отправить заявку</button>
+        </form>
+        <p id="response" style="margin-top:10px; color:#363fa0;"></p>
+    </section>
+
+    <section id="map">
+<div class="map-wrapper" onclick="this.querySelector('iframe').style.pointerEvents='auto'">
+  <iframe
+    src="https://www.google.com/maps?q=53.937393,27.593137&hl=ru&z=18&output=embed"
+    width="100%"
+    height="400"
+    frameborder="0"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+    </section>
+    <footer>
+        <p>© 2025 N<sub>3</sub>O | Все права защищены</p>
+        <p>УНП: 193860481</p>
+        <p>Телефон: <a href="tel:+375291000033">+375 (29) 100-00-33</a></p>
+    </footer>
+    <script>
+        const TOKEN = "YOUR_BOT_TOKEN"; // ← сюда вставь токен
+        const CHAT_ID = YOUR_CHAT_ID;   // ← сюда вставь свой ID
+        document.getElementById("booking-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const name = document.getElementById("name").value;
+            const phone = document.getElementById("phone").value;
+            const service = document.getElementById("service").value;
+
+            const message = `🚗 *Новая заявка с сайта AutoPro Detailing*\n\n👤 Имя: ${name}\n📞 Телефон: ${phone}\n🧰 Услуга: ${service}`;
+
+            fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ chat_id: CHAT_ID, text: message, parse_mode: "Markdown" })
+            })
+                .then(() => {
+                    document.getElementById("response").innerText = "✅ Заявка успешно отправлена!";
+                    document.getElementById("booking-form").reset();
+                })
+                .catch(() => {
+                    document.getElementById("response").innerText = "❌ Ошибка отправки. Попробуйте позже.";
+                });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.addEventListener('touchstart', function () { }, { passive: true });
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.loading = 'lazy';
+            });
+        });
+    </script>
+</body>
+<script>
+  document.querySelectorAll('.service-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const targetId = button.getAttribute('data-target');
+      const targetList = document.getElementById(targetId);
+      document.querySelectorAll('.sublist').forEach(list => {
+        if (list !== targetList) {
+          list.style.maxHeight = '0';
+          list.style.opacity = '0';
+        }
+      });
+      if (targetList.style.maxHeight === '0px' || !targetList.style.maxHeight) {
+        targetList.style.maxHeight = targetList.scrollHeight + 'px';
+        targetList.style.opacity = '1';
+      } else {
+        targetList.style.maxHeight = '0';
+        targetList.style.opacity = '0';
+      }
+    });
+  });
+</script>
+</html>
